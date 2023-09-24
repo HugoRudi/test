@@ -1,0 +1,137 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+}
+
+/* Flexbox Header */
+header {
+    background-color: #ffffff;
+    color: #fff;
+}
+.flex-header{
+    display: flex;
+    justify-content: flex-end;  
+    padding: 10px 20px;
+}
+
+.flex-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#header-image {
+    margin-left: 10px;
+    max-width: 200px;  
+    width: 50%;       
+    height: auto;
+
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-list li a:hover {
+    background-color: #e4e4e4;
+}
+
+/* Grid Main Content */
+.grid-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.sidebar {
+    background-color: #ddd;
+    padding: 20px;
+}
+
+.main-content {
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Flexbox Footer */
+footer {
+    display: flex;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-left {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    min-width: 30%;
+}
+.footer-left p{
+    padding-left: 3em;
+
+}
+
+.footer-right{
+    display: flex;
+    justify-content: right;
+    text-align: left;
+    margin-left: 15%;
+    min-width: 40%;
+}
+.footer-middle{
+    display: flex;
+    justify-content: middle;
+    text-align: left;
+    margin-left: 15%;
+    min-width: 30%;
+}
+
+
+/* Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .grid-content {
+        grid-template-columns: 1fr; 
+    }
+
+    #header-image {
+        max-width: 150px;
+        width: 30%;  
+    }
+
+}
+
+i.fa-solid{
+    margin: 0.5em 0px 0px 0px;
+    text-align: right;
+}
