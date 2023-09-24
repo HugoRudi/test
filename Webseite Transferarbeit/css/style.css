@@ -112,7 +112,20 @@ footer {
     margin-left: 15%;
     min-width: 30%;
 }
+.flex-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
+.flex-form label, 
+.flex-form input, 
+.flex-form textarea, 
+.flex-form button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
 
 /* Smaller Screens */
 @media (max-width: 768px) {
@@ -134,4 +147,12 @@ footer {
 i.fa-solid{
     margin: 0.5em 0px 0px 0px;
     text-align: right;
+}
+.nav-list li a.active{
+    background-color: #a6a9ab;
+    color: #fff;
+
+}
+.footer-left a{
+    color:#fff;
 }

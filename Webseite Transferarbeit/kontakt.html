@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Bestattungsunternehmen, Bestattungsdienst, Trauerbegleitung, Vollbüttel, Beerdigung, Erdbestattung, Feuerbestattung, Bestattungsvorsorge">
+    <meta name="description" content="Das Bestattungsunternehmen Adam Bestattungen in Vollbüttel bietet eine respektvolle und individuelle Betreuung in schweren Zeiten. Jahrelange Erfahrung und Verständnis für Ihre Bedürfnisse.">
     <title>Adam Bestattungen</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/9fc0d00d3a.js" crossorigin="anonymous"></script>
 </head>
 
@@ -27,7 +29,7 @@
                     <li><a href="dienstleistungen.html" style="color: #000;">Dienstleistungen</a></li>
                     <li><a href="urnen.html" style="color: #000;">S&auml;rge / Urnen</a></li>
                     <li><a href="einzugsgebiet.html" style="color: #000;">Einzugsgebiet</a></li>
-                    <li><a href="kontakt.html" style="color: #000;">Kontakt</a></li>
+                    <li><a href="kontakt.html" style="color: #000;" class="active">Kontakt</a></li>
                 </ul>
             </div>
         </aside>
@@ -35,6 +37,60 @@
             <h2>Kontaktaufnahme</h2>
             <p>Bitte zögern Sie nicht, sich mit mir in Verbindung zu setzen. Ich respektiere Ihre Privatsphäre und garantiere Ihnen eine vertrauliche Behandlung Ihrer Anfragen. Sollten Sie mich telefonisch einmal nicht erreichen, können Sie das Kontaktformular nutzen, um mir eine Nachricht zu hinterlassen. Ich werde mich umgehend bei Ihnen melden, um Ihnen beizustehen.
            </p>
+           <form id="contactForm" action="php/submit.php" method="post">
+            <div class="flex-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="phone">Telefonnummer:</label>
+                <input type="tel" id="phone" name="phone">
+        
+                <label for="message">Nachricht:</label>
+                <textarea id="message" name="message"></textarea>
+        
+                <button type="submit">Absenden</button>
+            </div>
+        </form>
+        <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+        
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+        
+            var errors = [];
+
+            if (name.length < 2) {
+                errors.push('Der Name muss mindestens 2 Zeichen lang sein.');
+            }
+        
+ 
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!email.match(emailPattern)) {
+                errors.push('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+            }
+        
+
+            if (message.length < 10) {
+                errors.push('Die Nachricht muss mindestens 10 Zeichen lang sein.');
+            }
+        
+
+            var errorMessagesDiv = document.getElementById('errorMessages');
+            if (errors.length > 0) {
+                errorMessagesDiv.innerHTML = errors.join('<br>');
+            } else {
+                errorMessagesDiv.innerHTML = '';
+                this.submit(); 
+            }
+        });
+        </script>
+        <div id="errorMessages" style="color: red;"></div>
+        
         </section>
     </div>
 

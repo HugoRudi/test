@@ -26,7 +26,7 @@
             <div class="container flex-nav">
                 <ul class="nav-list">
                     <li><a href="home.html" style="color: #000;">Home</a></li>
-                    <li><a href="dienstleistungen.html" style="color: #000;" class="active">Dienstleistungen</a></li>
+                    <li><a href="dienstleistungen.html" style="color: #000;">Dienstleistungen</a></li>
                     <li><a href="urnen.html" style="color: #000;">S&auml;rge / Urnen</a></li>
                     <li><a href="einzugsgebiet.html" style="color: #000;">Einzugsgebiet</a></li>
                     <li><a href="kontakt.html" style="color: #000;">Kontakt</a></li>
@@ -34,8 +34,15 @@
             </div>
         </aside>
         <section class="main-content">
-            <h2>Meine Dienstleistung</h2>
-            <p></span></br>Ich stehe allen Philosophien, Glaubensrichtungen und konfessionslosen Menschen offen gegenüber. Im Vordergrund stehen für mich die Wünsche der verstorbenen Person und deren Angehörige. Dabei lege ich sehr grossen Wert der verstorbenen Person die letzte Ehre zu erweisen. Ich berate Sie gern. </span></br></span></br>Meine Dienstleistung umfasst sowohl die Erstberatung als auch eine umfassende Trauerbegleitung in jeder Phase. Ich kümmere mich um die notwendigen Formalitäten in dieser schweren Zeit und übernehme selbstverständlich die Überführung der verstorbenen Person unabhängig davon, ob sie zu Hause oder an einem anderen Ort verstorben ist.</p>
+            <form action="/website/php/login.php" method="post" id="loginForm">
+                <label for="username">Benutzername:</label>
+                <input type="text" id="username" name="username">
+            
+                <label for="password">Passwort:</label>
+                <input type="password" id="password" name="password">
+            
+                <button type="submit">Einloggen</button>
+            </form>
         </section>
     </div>
 
